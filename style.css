@@ -1,68 +1,18 @@
-body {
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin-top: 50px;
+ /* Animated Background */
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #1e3c72, #2a5298, #6dd5ed, #2193b0);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    z-index: -1;
 }
 
-h1 {
-  color: #007acc;
-}
-
-p {
-  font-size: 20px;
-}
-.skill-item {
-  background: linear-gradient(45deg, #667eea, #764ba2);
-  color: white;
-  padding: 1rem;
-  border-radius: 10px;
-  font-weight: 600;
-
-  height: 80px; /* Kutucukların yüksekliği eşitlendi */
-  display: flex; /* Flex ile içerik hizalama */
-  align-items: center; /* Dikey ortalama */
-  justify-content: center; /* Yatay ortalama */
-  margin: 0.5rem; /* İstersen kutucuklar arası boşluk */
-}
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-  }
-
-  .skill-item {
-    height: 70px;
-    font-size: 1rem;
-  }
-}
-/* Diğer CSS kodların */
-
-.skill-item {
-  height: 80px;
-  /* diğer stiller */
-}
-
-/* Medya sorgusu en altta */
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-  }
-
-  .skill-item {
-    height: 70px;
-    font-size: 1rem;
-  }
-}
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .skill-item {
-    height: 70px;
-    font-size: 1rem;
-  }
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
